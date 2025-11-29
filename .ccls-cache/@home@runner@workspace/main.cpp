@@ -8,9 +8,10 @@
 #include "IntBinaryTree.h"
 using namespace std;
 
-void loadCodesFromFile(string filename, IntBinaryTree &tree);
+void loadCodesFromFile(const string &filename, IntBinaryTree &tree){
+ifstream inFile(filename);
 if(!inFile) {
-    cout << "Error opening file." << endl;
+    cerr << "Error opening file." << endl;
     return;
 }
     string code;
@@ -18,18 +19,16 @@ if(!inFile) {
     while (inFile >> code){
         tree.insertNode(code);
     }
-inFile.close():
+inFile.close();
     cout << "Finished loading codes from " << filename << endl;
 }
 
 int main() {
     IntBinaryTree tree;
 
-tree.insertNode("HELLO");
-tree.insertNode("WORLD");
-tree.insertNode("YAY");
+    loadCodesFromFile("codes.txt", tree);
     
-    cout << "Testing for Milestone2" << endl;
+    cout << "BST contents from codes.txt" << endl;
     tree.displayInOrder();
     
 return 0;
