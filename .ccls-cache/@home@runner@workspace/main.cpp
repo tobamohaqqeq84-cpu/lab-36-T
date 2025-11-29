@@ -36,15 +36,65 @@ int main() {
     
   loadCodesFromFile("codes.txt", tree);
 
-    int choice
+    int choice = 0;
+    string code, newCode;
 
-     tree.displayInOrder();
+    do {
+         showMenu();
+         cin >> choice;
 
-  cout << "---BST CONTENTS---" << endl;
-    cout << "Finished loading codes from codes.txt " << endl;
-    
+        switch (choice){
+            case 1:
+                cout << "---BST CONTENTS---" << endl;
+                tree.displayInOrder();
+                cout << "Finished loading codes from codes.txt " << endl;
+                break;
 
+            case 2:
+                cout << "Enter the code to search for: ";
+                cin >> code;
+             if (tree.searchNode(code)) {
+                    cout << "Code /"<< code << "/ was found in the tree." << endl;
+                } else {
+                    cout << "Code /" << code << "/ was not found." << endl;
+                }
+             break;
 
-    
-  return 0;
-}
+            case 3:
+                cout << "Enter the code to add: ";
+             cin >> code;
+             tree.insertNode(code);
+             cout << "Code /" << code << "/ was added to the tree." << endl;
+             break;
+
+            case 4:
+                cout << "Enter the code to remove: ";
+             cin >> code;
+            if(tree.searchNode(code)){
+                tree.remove(code);
+                cout << "Code /" << code << "/ was removed from the tree." << endl;
+            }
+            break;
+
+             case 5:
+             cout << "Enter the code to modify: ";
+             cin >> code;
+             if (!tree.searchNode(code)){
+                 cout << "Code /" << code << "/ was not found." << endl;
+             } else {
+                 cout << "Enter the code value: ";
+                 cin >> newCode;
+                 tree.remove(code);
+                 tree.insertNode(newCode);
+                 cout << "Code /" << code << "/ was modified to /" << newCode << "/." << endl;}
+             break;
+             case 6:
+                 cout << "Exiting program." << endl;
+                 break;
+             default:
+             cout << "Invalid choice. Please try again." << endl;
+            }
+             }while (choice != 6);
+        return 0;
+        }
+   
