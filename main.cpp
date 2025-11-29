@@ -17,14 +17,18 @@ cerr << "Error opening file." << endl;         return;     }
     inFile.close();     
     cout << "Finished loading codes from " << filename << endl;
 }
+tree.
 
 int main() {
   IntBinaryTree tree;
-
+    
   loadCodesFromFile("codes.txt", tree);
 
-  cout << "BST contents from codes.txt\n";
      tree.displayInOrder();
+
+  cout << "---BST CONTENTS---" << endl;
+ cout << "Finished displaying codes." << endl;
+    
 
 
     
