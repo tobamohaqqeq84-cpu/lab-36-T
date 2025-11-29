@@ -19,10 +19,24 @@ cerr << "Error opening file." << endl;         return;     }
     
 }
 
+void showMenu(){
+    cout << "---BST Menu---" << endl;
+    cout << "1. Display all codes \n";
+    cout << "2. Search for a code \n";
+    cout << "3. Add a new code \n";
+    cout << "4. Remove a code \n";
+    cout << "5. Modify a code \n";
+    cout << "6. Exit \n";
+    cout << "Enter your choice:";
+
+}
+
 int main() {
   IntBinaryTree tree;
     
   loadCodesFromFile("codes.txt", tree);
+
+    int choice
 
      tree.displayInOrder();
 
