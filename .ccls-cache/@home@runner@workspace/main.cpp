@@ -13,11 +13,11 @@ void loadCodesFromFile(const string &filename, IntBinaryTree &tree){
 if(!inFile) {        
 cerr << "Error opening file." << endl;         return;     }   
     string code;     
-    while (inFile >> code){         tree.insertNode(code);     }   
+    while (inFile >> code){         tree.insertNode(code);     } 
+    
     inFile.close();     
-    cout << "Finished loading codes from " << filename << endl;
+    
 }
-tree.
 
 int main() {
   IntBinaryTree tree;
@@ -27,7 +27,7 @@ int main() {
      tree.displayInOrder();
 
   cout << "---BST CONTENTS---" << endl;
- cout << "Finished displaying codes." << endl;
+    cout << "Finished loading codes from codes.txt " << endl;
     
 
 
