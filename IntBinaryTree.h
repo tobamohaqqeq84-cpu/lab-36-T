@@ -54,9 +54,10 @@ insert(nodePtr->left, newNode); // Search the left branch
 else
 insert(nodePtr->right, newNode); // Search the right branch
 }
+
 // insertNode creates a new node to hold num as its value,
 // and passes it to the insert function.
-void IntBinaryTree::insertNode(int num) {
+void IntBinaryTree::insertNode(const string &str num) {
 TreeNode *newNode; // Pointer to a new node.
 // Create a new node and store num in it.
 newNode = new TreeNode;
