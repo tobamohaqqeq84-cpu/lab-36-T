@@ -40,9 +40,7 @@ public:
   void displayPostOrder() const { displayPostOrder(root); }
 };
 // Implementation file for the IntBinaryTree class
-#include "IntBinaryTree.h"
-#include <iostream>
-using namespace std;
+
 // insert accepts a TreeNode pointer and a pointer to a node.
 // The function inserts the node into the tree pointed to by
 // the TreeNode pointer. This function is called recursively.

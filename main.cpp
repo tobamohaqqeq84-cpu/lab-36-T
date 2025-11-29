@@ -9,6 +9,11 @@ using namespace std;
 int main() {
     IntBinaryTree tree;
 
-    cout << "Lab 36 project is set up and running successfully!" << endl;
+tree.insertNode("HELLO");
+tree.insertNode("WORLD");
+tree.insertNode("YAY");
+    cout << "Testing for Milestone2" << endl;
+    tree.displayInOrder();
+    
 return 0;
 }
