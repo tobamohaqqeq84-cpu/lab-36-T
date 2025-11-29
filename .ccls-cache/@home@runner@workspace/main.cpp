@@ -12,6 +12,7 @@ int main() {
 tree.insertNode("HELLO");
 tree.insertNode("WORLD");
 tree.insertNode("YAY");
+    
     cout << "Testing for Milestone2" << endl;
     tree.displayInOrder();
     
