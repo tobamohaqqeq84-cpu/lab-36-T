@@ -23,8 +23,10 @@ int main() {
 
   loadCodesFromFile("codes.txt", tree);
 
-  cout << "BST contents from codes.txt" << endl;
-  tree.displayInOrder();
+  cout << "BST contents from codes.txt\n";
+     tree.displayInOrder();
 
+
+    
   return 0;
 }
